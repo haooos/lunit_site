@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Lunit – For Interviewee&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; color: #1a1a2e; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #000; padding: 16px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex; align-items: center; gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo { color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 2px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #00c2ff; color: #000;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 3px 10px; border-radius: 20px; letter-spacing: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 60%, #0d3b6e 100%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #fff; text-align: center; padding: 60px 24px 50px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero .emoji { font-size: 48px; margin-bottom: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero h1 { font-size: 26px; font-weight: 800; margin-bottom: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero p { font-size: 14px; color: #a0b4cc; line-height: 1.7; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.container { max-width: 700px; margin: 0 auto; padding: 32px 20px 60px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section { margin-bottom: 36px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-title { font-size: 12px; font-weight: 700; color: #00c2ff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px 24px; border-bottom: 1px solid #f0f0f0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex; gap: 14px; align-items: flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-row:last-child { border-bottom: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.check {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 22px; height: 22px; background: #e8f9f0; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px; flex-shrink: 0; margin-top: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-text { font-size: 14px; line-height: 1.7; color: #333; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card-text .sub { font-size: 13px; color: #888; margin-top: 4px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width: 480px) { .cards-grid { grid-template-columns: 1fr; } }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.link-card {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #fff; border-radius: 16px; padding: 24px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 2px 12px rgba(0,0,0,0.07);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none; color: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: transform 0.2s, box-shadow 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex; flex-direction: column; gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.link-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.link-card .icon { font-size: 32px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.link-card .title { font-size: 15px; font-weight: 700; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.link-card .desc { font-size: 13px; color: #888; line-height: 1.5; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.link-card .cta { font-size: 12px; color: #00c2ff; font-weight: 600; margin-top: auto; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>footer { text-align: center; padding: 24px; font-size: 12px; color: #aaa; }</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="logo"&gt;LUNIT&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="badge"&gt;For Interviewee&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="emoji"&gt;🐥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;안녕하세요, 루닛에 오신 걸 환영합니다!&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;심심한 대기 시간, 둘러볼 만한 콘텐츠를 준비했어요&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;span style="color:#6a8ca8"&gt;We've prepared some content for you to browse through while you wait&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-title"&gt;자주 묻는 사항 · FAQ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="check"&gt;✅&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>화장실은 복도에 있습니다. 자유롭게 이용해주세요.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="sub"&gt;The restroom is located in the hallway. Please feel free to use it.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="check"&gt;✅&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>면접 종료 후에는 귀가해주시면 됩니다.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="sub"&gt;You may leave after the interview is over.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="check"&gt;✅&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>면접 결과는 1~2주 내에 이메일로 안내드리고 있습니다.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="sub"&gt;The results of the interview will be notified to you via email within 1–2 weeks.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-title"&gt;루닛 둘러보기 · Explore Lunit&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cards-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="link-card" href="https://www.lunit.io" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="icon"&gt;🏢&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="title"&gt;Lunit 소개&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="desc"&gt;루닛은 어떤 회사일까요? AI로 암을 정복합니다.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta"&gt;lunit.io →&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="link-card" href="https://medium.com/lunit" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="icon"&gt;💡&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="title"&gt;Team Blog&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="desc"&gt;루니션들의 인사이트 모음집&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta"&gt;블로그 보러가기 →&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;© 2025 Lunit Inc. · AI-Powered Cancer Care&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
