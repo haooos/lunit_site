@@ -20,7 +20,6 @@
     padding:0 48px; height:64px;
   }
   .logo { font-size:18px; font-weight:900; letter-spacing:3px; color:var(--black); text-decoration:none; }
-  .logo span { color:var(--blue); }
   .header-tag { font-size:11px; font-weight:600; color:var(--gray); letter-spacing:2px; text-transform:uppercase; }
 
   /* HERO */
@@ -34,9 +33,7 @@
     background:radial-gradient(circle,rgba(0,194,255,.15) 0%,transparent 70%);
     pointer-events:none;
   }
-  .hero-label { font-size:11px; font-weight:600; letter-spacing:3px; color:var(--blue); text-transform:uppercase; margin-bottom:24px; }
   .hero h1 { font-size:clamp(36px,6vw,64px); font-weight:900; color:#fff; line-height:1.1; margin-bottom:12px; letter-spacing:-1px; }
-  .hero h1 em { color:var(--blue); font-style:normal; }
   .hero-sub { font-size:15px; color:#6a8ca8; margin-top:16px; line-height:1.7; }
   .hero-divider { width:40px; height:3px; background:var(--blue); margin:32px 0; }
   .hero-desc { font-size:13px; color:#aaa; line-height:1.8; max-width:480px; }
@@ -81,7 +78,7 @@
   .address-info {
     background:#fff; border-radius:20px; padding:40px;
     border:1.5px solid var(--border);
-    display:flex; flex-direction:column; gap:20px;
+    display:flex; flex-direction:column; justify-content:space-between;
   }
   .info-row { display:flex; flex-direction:column; gap:4px; }
   .info-row .lbl { font-size:11px; font-weight:700; letter-spacing:2px; color:var(--blue); text-transform:uppercase; }
@@ -121,11 +118,10 @@
   .tab-pane.active { display:block; }
 
   /* PHOTO STEPS */
-  .steps { display:flex; flex-direction:column; gap:0; }
+  .steps { display:flex; flex-direction:column; gap:20px; }
   .step {
-    display:grid; grid-template-columns:1fr 1fr; gap:0;
+    display:grid; grid-template-columns:1fr 1fr;
     border-radius:20px; overflow:hidden; border:1.5px solid var(--border);
-    margin-bottom:20px;
   }
   .step:nth-child(even) { direction:rtl; }
   .step:nth-child(even) > * { direction:ltr; }
@@ -135,10 +131,7 @@
     background:#fff; gap:12px;
   }
   .step:nth-child(even) .step-info { background:var(--black); }
-  .step-num {
-    font-size:48px; font-weight:900; color:rgba(0,194,255,.15); line-height:1;
-    margin-bottom:4px;
-  }
+  .step-num { font-size:48px; font-weight:900; color:rgba(0,194,255,.15); line-height:1; margin-bottom:4px; }
   .step:nth-child(even) .step-num { color:rgba(0,194,255,.2); }
   .step-ko { font-size:16px; font-weight:700; color:var(--black); line-height:1.6; }
   .step:nth-child(even) .step-ko { color:#fff; }
@@ -147,14 +140,14 @@
   @media(max-width:640px){
     .step { grid-template-columns:1fr; direction:ltr !important; }
     .step-img { height:220px; }
+    .step-info { padding:24px; }
   }
 
-  /* PARKING TABLE */
+  /* PARKING */
   .parking-card {
     background:#fff; border-radius:16px; padding:32px;
-    border:1.5px solid var(--border); margin-bottom:16px;
+    border:1.5px solid var(--border);
   }
-  .parking-card h4 { font-size:16px; font-weight:800; margin-bottom:20px; }
   .tag {
     display:inline-block; background:rgba(0,194,255,.12); color:var(--blue);
     font-size:11px; font-weight:700; padding:4px 10px; border-radius:6px;
@@ -171,7 +164,7 @@
   .name-ko { font-size:14px; font-weight:700; color:var(--black); }
   .name-en { font-size:12px; color:var(--gray); margin-top:2px; }
   .addr-ko { font-size:13px; color:#444; }
-  .addr-en { font-size:12px; color:var(--gray); margin-top:2px; }
+  .addr-en-td { font-size:12px; color:var(--gray); margin-top:2px; }
   .fee { font-size:14px; font-weight:700; color:var(--blue); white-space:nowrap; }
   .map-links { display:flex; flex-direction:column; gap:4px; }
   .map-link {
@@ -192,13 +185,21 @@
   .warning-box p { font-size:13px; color:#5a4000; line-height:1.7; }
   .warning-box .en { font-size:12px; color:#8a7040; margin-top:4px; }
 
+  .info-box {
+    background:#fff; border-radius:16px; padding:32px;
+    border:1.5px solid var(--border); margin-bottom:12px;
+  }
+  .info-box h4 { font-size:16px; font-weight:800; margin-bottom:10px; }
+  .info-box.dark { background:var(--black); border-color:var(--black); }
+  .info-box.dark h4 { color:#fff; }
+  .info-box.dark p { color:#aaa; }
+
   /* FOOTER */
   footer {
     background:var(--black); padding:40px 48px;
     display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
   }
   footer .f-logo { font-size:16px; font-weight:900; letter-spacing:3px; color:#fff; }
-  footer .f-logo span { color:var(--blue); }
   footer p { font-size:12px; color:#555; }
 
   @media(max-width:768px){
@@ -206,20 +207,20 @@
     .hero { padding:80px 24px 60px; }
     section { padding:60px 24px; }
     footer { padding:32px 24px; }
-    .step-info { padding:24px; }
   }
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-  <a class="logo" href="#">LUN<span>I</span>T</a>
+  <a class="logo" href="#">LUNIT</a>
   <span class="header-tag">How to get to our office</span>
 </header>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-label">Lunit Talent Acquisition</div>
-  <h1>오시는<br><em>길</em></h1>
+  <h1>오시는 길</h1>
   <div class="hero-sub">How to Get to Lunit's Office</div>
   <div class="hero-divider"></div>
   <p class="hero-desc">
@@ -259,13 +260,11 @@
       <div class="info-row">
         <div class="lbl">Phone</div>
         <div class="val"><a href="tel:07041612253">070-4161-2253</a></div>
-        <div class="val-en"><a href="tel:07041612253">Recruitment Team Direct Line</a></div>
       </div>
       <div class="divider-line"></div>
       <div class="info-row">
         <div class="lbl">Email</div>
         <div class="val"><a href="mailto:recruitment@lunit.io">recruitment@lunit.io</a></div>
-        <div class="val-en"><a href="mailto:recruitment@lunit.io">Recruitment Team Email</a></div>
       </div>
     </div>
   </div>
@@ -310,74 +309,50 @@
     <button class="tab-btn" onclick="showTab('parking',this)">🅿️ 주변 주차장 · Nearby Parking</button>
   </div>
 
-  <!-- SUBWAY TAB -->
+  <!-- SUBWAY: 총 3단계 -->
   <div id="tab-subway" class="tab-pane active">
     <div class="steps">
-
       <div class="step">
-        <img class="step-img" src="subway1.jpg" alt="강남역 출구">
+        <img class="step-img" src="subway1.webp" alt="강남역 출구">
         <div class="step-info">
           <div class="step-num">01</div>
           <div class="step-ko">강남역 신분당선 3번 또는 4번 출구로 나오세요.</div>
           <div class="step-en">Exit through Exit 3 or 4 of Gangnam Station (Shinbundang Line).</div>
         </div>
       </div>
-
       <div class="step">
-        <img class="step-img" src="subway2.jpg" alt="크리스피크림 방향">
+        <img class="step-img" src="subway2.webp" alt="크리스피크림 방향">
         <div class="step-info">
           <div class="step-num">02</div>
-          <div class="step-ko">크리스피크림 도넛 방향으로 직진해주세요.<br>건물 외부 조형물(사람 형상)이 보입니다.</div>
-          <div class="step-en">Walk straight toward Krispy Kreme. You'll see a human-shaped sculpture on the building.</div>
+          <div class="step-ko">크리스피크림 도넛 방향으로 직진해주세요.<br>건물 외부 조형물(고양이 형상)이 보입니다.</div>
+          <div class="step-en">Walk straight toward Krispy Kreme. You'll see a cat-shaped sculpture on the building.</div>
         </div>
       </div>
-
-      <div class="step">
-        <img class="step-img" src="subway3.webp" alt="건물 입구">
-        <div class="step-info">
-          <div class="step-num">03</div>
-          <div class="step-ko">K-Square 2 건물 정면 입구로 들어오세요.<br>자동문을 통해 로비로 진입합니다.</div>
-          <div class="step-en">Enter through the main entrance of K-Square 2. Pass through the automatic doors into the lobby.</div>
-        </div>
-      </div>
-
-      <div class="step">
-        <img class="step-img" src="subway4.webp" alt="로비 엘리베이터">
-        <div class="step-info">
-          <div class="step-num">04</div>
-          <div class="step-ko">로비에서 왼쪽 방향 엘리베이터 홀로 이동하세요.</div>
-          <div class="step-en">Head left toward the elevator hall inside the lobby.</div>
-        </div>
-      </div>
-
       <div class="step">
         <img class="step-img" src="subway4.webp" alt="엘리베이터">
         <div class="step-info">
-          <div class="step-num">04</div>
+          <div class="step-num">03</div>
           <div class="step-ko"><strong style="color:var(--blue)">하늘색으로 표시된 엘리베이터 2대</strong>를 이용해 5층으로 올라오세요.</div>
           <div class="step-en">Take one of the <strong style="color:var(--blue)">two elevators highlighted in blue</strong> up to the 5th floor.</div>
         </div>
       </div>
-
     </div>
-    <div style="background:rgba(0,194,255,.08);border-radius:12px;padding:16px 20px;margin-top:8px;border:1px solid rgba(0,194,255,.2);">
+    <div style="background:rgba(0,194,255,.08);border-radius:12px;padding:16px 20px;margin-top:20px;border:1px solid rgba(0,194,255,.2);">
       <p style="font-size:13px;color:#444;">♿ <strong>장애인용 화장실</strong>은 로비층에 있습니다. &nbsp;<span style="color:var(--gray)">The accessible restroom is located on the lobby floor.</span></p>
     </div>
   </div>
 
-  <!-- CAR TAB -->
+  <!-- CAR: 총 3단계 -->
   <div id="tab-car" class="tab-pane">
     <div class="steps">
-
       <div class="step">
         <img class="step-img" src="car1.webp" alt="주차장 입구">
         <div class="step-info">
           <div class="step-num">01</div>
-          <div class="step-ko">K-Square 2 주차장 입구(AMANO 기계식 주차장)로 진입하세요.</div>
-          <div class="step-en">Enter the K-Square 2 parking lot (AMANO mechanical parking).</div>
+          <div class="step-ko">K-Square 2 주차장 입구로 진입하세요.</div>
+          <div class="step-en">Enter the K-Square 2 parking lot.</div>
         </div>
       </div>
-
       <div class="step">
         <img class="step-img" src="car2.webp" alt="주차 후 출구">
         <div class="step-info">
@@ -386,35 +361,33 @@
           <div class="step-en">After parking, enter the building through the side door.</div>
         </div>
       </div>
-
       <div class="step">
-        <img class="step-img" src="car4.webp" alt="엘리베이터">
+        <img class="step-img" src="car3.webp" alt="엘리베이터">
         <div class="step-info">
-          <div class="step-num">04</div>
+          <div class="step-num">03</div>
           <div class="step-ko"><strong style="color:var(--blue)">하늘색으로 표시된 엘리베이터 2대</strong>만 5층으로 운행합니다.<br>해당 엘리베이터를 이용해주세요.</div>
           <div class="step-en">Only the <strong style="color:var(--blue)">two elevators marked in blue</strong> go to the 5th floor. Please use those elevators.</div>
         </div>
       </div>
-
     </div>
-    <div class="warning-box" style="margin-top:8px;">
+    <div class="warning-box" style="margin-top:20px;">
       <p>⚠️ 중량 <strong>2.2T 이상</strong> / 전장 <strong>5.3M 이상</strong> 차량은 주차가 어렵습니다. 요금: <strong>1시간 6,000원</strong></p>
       <p class="en">Vehicles over 2.2T or 5.3M cannot use the mechanical parking lot. Fee: KRW 6,000 / hour.</p>
     </div>
   </div>
 
-  <!-- NEARBY PARKING TAB -->
+  <!-- NEARBY PARKING -->
   <div id="tab-parking" class="tab-pane">
     <div class="parking-card">
       <div class="tag">NEARBY PARKING</div>
-      <h4>주변 주차장</h4>
+      <h4 style="font-size:16px;font-weight:800;margin-bottom:20px;">주변 주차장</h4>
       <table class="parking-table">
         <thead>
           <tr>
             <th style="width:28%">주차장</th>
             <th style="width:30%">주소</th>
-            <th style="width:16%">요금</th>
-            <th style="width:26%">지도</th>
+            <th style="width:14%">요금</th>
+            <th style="width:28%">지도</th>
           </tr>
         </thead>
         <tbody>
@@ -425,7 +398,7 @@
             </td>
             <td>
               <div class="addr-ko">테헤란로 2길 27</div>
-              <div class="addr-en">27, Teheran-ro 2-gil</div>
+              <div class="addr-en-td">27, Teheran-ro 2-gil</div>
             </td>
             <td><div class="fee">₩6,000/hr</div></td>
             <td>
@@ -442,7 +415,7 @@
             </td>
             <td>
               <div class="addr-ko">강남대로84길 23</div>
-              <div class="addr-en">23, Gangnam-daero 84-gil</div>
+              <div class="addr-en-td">23, Gangnam-daero 84-gil</div>
             </td>
             <td><div class="fee">₩4,000/hr</div></td>
             <td>
@@ -462,7 +435,7 @@
 </section>
 
 <footer>
-  <div class="f-logo">LUN<span>I</span>T</div>
+  <div class="f-logo">LUNIT</div>
   <p>© 2025 Lunit Inc. · AI-Powered Cancer Care</p>
 </footer>
 
