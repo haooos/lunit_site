@@ -1,220 +1,204 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunit – 오시는 길</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; color: #1a1a2e; }
+
+  header {
+    background: #000; padding: 16px 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .logo { color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 2px; }
+
+  .hero {
+    background: linear-gradient(135deg, #0a0a1a, #0d3b6e);
+    color: #fff; padding: 50px 24px; text-align: center;
+  }
+  .hero h1 { font-size: 24px; font-weight: 800; margin-bottom: 10px; }
+  .hero p { font-size: 14px; color: #a0b4cc; line-height: 1.7; }
+
+  .container { max-width: 700px; margin: 0 auto; padding: 32px 20px 60px; }
+  .section { margin-bottom: 36px; }
+  .section-title { font-size: 12px; font-weight: 700; color: #00c2ff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+
+  .address-card {
+    background: #fff; border-radius: 16px; padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 16px;
+  }
+  .address-card h3 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+  .address-card p { font-size: 14px; color: #555; line-height: 1.7; }
+  .address-card .sub { font-size: 12px; color: #aaa; }
+  .address-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 18px; border-radius: 30px; font-size: 13px; font-weight: 700;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-dark { background: #000; color: #fff; }
+  .btn-dark:hover { background: #00c2ff; color: #000; }
+  .btn-outline { background: #fff; color: #000; border: 2px solid #eee; }
+  .btn-outline:hover { border-color: #00c2ff; color: #00c2ff; }
+
+  .notice-card {
+    background: #fff0e6; border-left: 4px solid #ff7043;
+    border-radius: 0 12px 12px 0; padding: 20px;
+    margin-bottom: 16px;
+  }
+  .notice-item { display: flex; gap: 10px; margin-bottom: 14px; font-size: 14px; line-height: 1.7; }
+  .notice-item:last-child { margin-bottom: 0; }
+  .notice-item .sub { font-size: 13px; color: #888; margin-top: 3px; }
+
+  .tab-btns { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab-btn {
+    padding: 9px 18px; border-radius: 30px; border: 2px solid #e0e0e0;
+    background: #fff; font-size: 13px; font-weight: 700; cursor: pointer;
+    transition: all 0.2s; color: #555;
+  }
+  .tab-btn.active { background: #000; color: #fff; border-color: #000; }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  .info-box {
+    background: #fff; border-radius: 16px; padding: 22px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 12px;
+  }
+  .info-box h4 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+  .info-box p { font-size: 14px; color: #444; line-height: 1.8; }
+  .info-box .sub { font-size: 13px; color: #888; margin-top: 6px; }
+
+  .parking-list { list-style: none; }
+  .parking-list li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px;
+  }
+  .parking-list li:last-child { border-bottom: none; }
+  .parking-list .fee { color: #00c2ff; font-weight: 700; font-size: 13px; }
+  .parking-note { font-size: 12px; color: #aaa; margin-top: 12px; }
+
+  footer { text-align: center; padding: 24px; font-size: 12px; color: #aaa; }
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="ko"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Lunit – 오시는 길&lt;/title&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; color: #1a1a2e; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #000; padding: 16px 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex; align-items: center; gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.logo { color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 2px; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: linear-gradient(135deg, #0a0a1a, #0d3b6e);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #fff; padding: 50px 24px; text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero h1 { font-size: 24px; font-weight: 800; margin-bottom: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero p { font-size: 14px; color: #a0b4cc; line-height: 1.7; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.container { max-width: 700px; margin: 0 auto; padding: 32px 20px 60px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section { margin-bottom: 36px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section-title { font-size: 12px; font-weight: 700; color: #00c2ff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.address-card {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #fff; border-radius: 16px; padding: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.address-card h3 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.address-card p { font-size: 14px; color: #555; line-height: 1.7; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.address-card .sub { font-size: 12px; color: #aaa; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.address-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: inline-flex; align-items: center; gap: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 18px; border-radius: 30px; font-size: 13px; font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none; transition: all 0.2s;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-dark { background: #000; color: #fff; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-dark:hover { background: #00c2ff; color: #000; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-outline { background: #fff; color: #000; border: 2px solid #eee; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-outline:hover { border-color: #00c2ff; color: #00c2ff; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.notice-card {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #fff0e6; border-left: 4px solid #ff7043;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 0 12px 12px 0; padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.notice-item { display: flex; gap: 10px; margin-bottom: 14px; font-size: 14px; line-height: 1.7; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.notice-item:last-child { margin-bottom: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.notice-item .sub { font-size: 13px; color: #888; margin-top: 3px; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tab-btns { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tab-btn {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 9px 18px; border-radius: 30px; border: 2px solid #e0e0e0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #fff; font-size: 13px; font-weight: 700; cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: all 0.2s; color: #555;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tab-btn.active { background: #000; color: #fff; border-color: #000; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tab-content { display: none; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tab-content.active { display: block; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.info-box {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: #fff; border-radius: 16px; padding: 22px 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.info-box h4 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.info-box p { font-size: 14px; color: #444; line-height: 1.8; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.info-box .sub { font-size: 13px; color: #888; margin-top: 6px; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.parking-list { list-style: none; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.parking-list li {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex; justify-content: space-between; align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 14px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.parking-list li:last-child { border-bottom: none; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.parking-list .fee { color: #00c2ff; font-weight: 700; font-size: 13px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.parking-note { font-size: 12px; color: #aaa; margin-top: 12px; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>footer { text-align: center; padding: 24px; font-size: 12px; color: #aaa; }</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="logo"&gt;LUNIT&lt;/div&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;🗺 How to Get to Lunit's Office&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;안녕하세요! Lunit의 Talent Acquisition Team입니다 😁&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>회사까지 조심히 오시기 바라는 마음에서 안내드립니다.&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;span style="color:#6a8ca8"&gt;We want to help ensure that you arrive at our office safely.&lt;/span&gt;&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-title"&gt;주소 · Address&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="address-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;루닛 (Lunit Inc.)&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;서울특별시 강남구 강남대로 374 | 5층&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="sub"&gt;374, Gangnam-daero, Gangnam-gu, Seoul | 5th floor&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="margin-top:8px;font-size:13px;color:#888;"&gt;K-Square 2 빌딩 · 강남역 도보 2분&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="address-actions"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn btn-dark" href="https://map.naver.com/v5/search/강남구 강남대로 374" target="_blank"&gt;🗺 네이버 지도&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn btn-outline" href="https://maps.google.com/?q=강남구+강남대로+374" target="_blank"&gt;📍 구글 지도&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-title"&gt;Please Note ✅&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="notice-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="notice-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;✅&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>면접 시간 5분 전까지 5층으로 와서 전화주시기 바랍니다.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="sub"&gt;Please arrive at the 5th floor at least 5 minutes before your interview and call us when you arrive.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="notice-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;✅&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>면접 시간보다 늦거나 어려우신 경우 전화 또는 이메일로 연락 주세요.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="sub"&gt;If you are delayed or cannot attend, please contact us by phone or email. Feel free to reach out with any questions too!&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-title"&gt;교통편 · Getting Here&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="tab-btns"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="tab-btn active" onclick="showTab('subway', this)"&gt;🚇 지하철&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="tab-btn" onclick="showTab('car', this)"&gt;🚘 자가용&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="tab-btn" onclick="showTab('parking', this)"&gt;🅿️ 주변 주차장&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="tab-subway" class="tab-content active"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;🚇 지하철 · Subway&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;강남역&lt;/strong&gt; 신분당선 &lt;strong&gt;3번 또는 4번 출구&lt;/strong&gt;에서 도보 약 2분 거리입니다.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="sub"&gt;Take the Shinbundang Line to Gangnam Station, Exit 3 or 4. It's a 2-minute walk.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="sub" style="margin-top:6px;"&gt;♿ 장애인용 화장실은 로비층에 있습니다. The accessible restroom is on the lobby floor.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="tab-car" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;🚘 주차 · Parking&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;K-Square 2 빌딩 내 &lt;strong&gt;기계식 주차장&lt;/strong&gt; 이용 가능.&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>5층까지 운행하는 엘리베이터는 &lt;strong&gt;2대&lt;/strong&gt;뿐이니 파란색 표시 엘리베이터를 이용해주세요.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="sub" style="margin-top:8px;"&gt;There is a mechanical parking lot at K-Square 2. Only two elevators go to the 5th floor.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-box" style="background:#fff8e1;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;⚠️ 주차 제한&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;중량 &lt;strong&gt;2.2T 이상&lt;/strong&gt; / 전장 &lt;strong&gt;5.3M 이상&lt;/strong&gt; 차량 주차 불가&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>요금: &lt;strong&gt;1시간 6,000원&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="sub"&gt;Vehicles over 2.2T or 5.3M not accepted. Fee: KRW 6,000/hr.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="tab-parking" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;🅿️ 주변 주차장 · Nearby Parking&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="parking-list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;strong&gt;비전타워&lt;/strong&gt;&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;span style="font-size:12px;color:#aaa;"&gt;테헤란로 2길 27 · Vision Tower&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="fee"&gt;1hr / ₩6,000&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;strong&gt;한라클래식&lt;/strong&gt;&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;span style="font-size:12px;color:#aaa;"&gt;강남대로84길 23 · Halla Classic&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="fee"&gt;1hr / ₩4,000&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="parking-note"&gt;※ 실제 금액과 차이가 있을 수 있으니 별도 확인 부탁드립니다. Actual amount may differ.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer&gt;© 2025 Lunit Inc. · AI-Powered Cancer Care&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>function showTab(name, el) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.tab-content').forEach(t =&gt; t.classList.remove('active'));</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.tab-btn').forEach(b =&gt; b.classList.remove('active'));</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('tab-' + name).classList.add('active');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>el.classList.add('active');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<header>
+  <div class="logo">LUNIT</div>
+</header>
+
+<div class="hero">
+  <h1>🗺 How to Get to Lunit's Office</h1>
+  <p>안녕하세요! Lunit의 Talent Acquisition Team입니다 😁<br>
+  회사까지 조심히 오시기 바라는 마음에서 안내드립니다.<br>
+  <span style="color:#6a8ca8">We want to help ensure that you arrive at our office safely.</span></p>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-title">주소 · Address</div>
+    <div class="address-card">
+      <h3>루닛 (Lunit Inc.)</h3>
+      <p>서울특별시 강남구 강남대로 374 | 5층</p>
+      <p class="sub">374, Gangnam-daero, Gangnam-gu, Seoul | 5th floor</p>
+      <p style="margin-top:8px;font-size:13px;color:#888;">K-Square 2 빌딩 · 강남역 도보 2분</p>
+      <div class="address-actions">
+        <a class="btn btn-dark" href="https://map.naver.com/v5/search/강남구 강남대로 374" target="_blank">🗺 네이버 지도</a>
+        <a class="btn btn-outline" href="https://maps.google.com/?q=강남구+강남대로+374" target="_blank">📍 구글 지도</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Please Note ✅</div>
+    <div class="notice-card">
+      <div class="notice-item">
+        <span>✅</span>
+        <div>
+          면접 시간 5분 전까지 5층으로 와서 전화주시기 바랍니다.
+          <div class="sub">Please arrive at the 5th floor at least 5 minutes before your interview and call us when you arrive.</div>
+        </div>
+      </div>
+      <div class="notice-item">
+        <span>✅</span>
+        <div>
+          면접 시간보다 늦거나 어려우신 경우 전화 또는 이메일로 연락 주세요.
+          <div class="sub">If you are delayed or cannot attend, please contact us by phone or email. Feel free to reach out with any questions too!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">교통편 · Getting Here</div>
+    <div class="tab-btns">
+      <button class="tab-btn active" onclick="showTab('subway', this)">🚇 지하철</button>
+      <button class="tab-btn" onclick="showTab('car', this)">🚘 자가용</button>
+      <button class="tab-btn" onclick="showTab('parking', this)">🅿️ 주변 주차장</button>
+    </div>
+
+    <div id="tab-subway" class="tab-content active">
+      <div class="info-box">
+        <h4>🚇 지하철 · Subway</h4>
+        <p><strong>강남역</strong> 신분당선 <strong>3번 또는 4번 출구</strong>에서 도보 약 2분 거리입니다.</p>
+        <p class="sub">Take the Shinbundang Line to Gangnam Station, Exit 3 or 4. It's a 2-minute walk.</p>
+        <p class="sub" style="margin-top:6px;">♿ 장애인용 화장실은 로비층에 있습니다. The accessible restroom is on the lobby floor.</p>
+      </div>
+    </div>
+
+    <div id="tab-car" class="tab-content">
+      <div class="info-box">
+        <h4>🚘 주차 · Parking</h4>
+        <p>K-Square 2 빌딩 내 <strong>기계식 주차장</strong> 이용 가능.<br>
+        5층까지 운행하는 엘리베이터는 <strong>2대</strong>뿐이니 파란색 표시 엘리베이터를 이용해주세요.</p>
+        <p class="sub" style="margin-top:8px;">There is a mechanical parking lot at K-Square 2. Only two elevators go to the 5th floor.</p>
+      </div>
+      <div class="info-box" style="background:#fff8e1;">
+        <h4>⚠️ 주차 제한</h4>
+        <p>중량 <strong>2.2T 이상</strong> / 전장 <strong>5.3M 이상</strong> 차량 주차 불가<br>
+        요금: <strong>1시간 6,000원</strong></p>
+        <p class="sub">Vehicles over 2.2T or 5.3M not accepted. Fee: KRW 6,000/hr.</p>
+      </div>
+    </div>
+
+    <div id="tab-parking" class="tab-content">
+      <div class="info-box">
+        <h4>🅿️ 주변 주차장 · Nearby Parking</h4>
+        <ul class="parking-list">
+          <li>
+            <div>
+              <strong>비전타워</strong><br>
+              <span style="font-size:12px;color:#aaa;">테헤란로 2길 27 · Vision Tower</span>
+            </div>
+            <div class="fee">1hr / ₩6,000</div>
+          </li>
+          <li>
+            <div>
+              <strong>한라클래식</strong><br>
+              <span style="font-size:12px;color:#aaa;">강남대로84길 23 · Halla Classic</span>
+            </div>
+            <div class="fee">1hr / ₩4,000</div>
+          </li>
+        </ul>
+        <p class="parking-note">※ 실제 금액과 차이가 있을 수 있으니 별도 확인 부탁드립니다. Actual amount may differ.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>© 2025 Lunit Inc. · AI-Powered Cancer Care</footer>
+
+<script>
+  function showTab(name, el) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    el.classList.add('active');
+  }
+</script>
 </body>
 </html>
